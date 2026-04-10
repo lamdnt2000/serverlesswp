@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#8B1A1A",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#7A6A4F",
+          "name": "Secondary"
+        },
+        {
+          "slug": "background",
+          "color": "#F5F0E8",
+          "name": "Background"
+        },
+        {
+          "slug": "text",
+          "color": "#7A6A4F",
+          "name": "Text"
+        },
+        {
+          "slug": "heading",
+          "color": "#8B1A1A",
+          "name": "Heading"
+        },
+        {
+          "slug": "link",
+          "color": "#8B1A1A",
+          "name": "Link"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "'Inter', sans-serif",
+          "slug": "body",
+          "name": "Body"
+        },
+        {
+          "fontFamily": "'Cormorant Garamond', serif",
+          "slug": "heading",
+          "name": "Heading"
+        },
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "system",
+          "name": "System"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.5rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "2rem",
+          "name": "Extra Large"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "vh",
+        "vw"
+      ]
+    }
+  },
+  "styles": {
+    "spacing": {
+      "padding": {
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0"
+      },
+      "blockGap": "0"
+    },
+    "css": ":root {\n  --td-color-primary: #8B1A1A;\n  --td-color-secondary: #7A6A4F;\n  --td-color-background: #F5F0E8;\n  --td-color-text: #7A6A4F;\n  --td-color-heading: #8B1A1A;\n  --td-color-link: #8B1A1A;\n  --td-color-link-hover: #6a1313;\n  --td-color-btn-primary-bg: #8B1A1A;\n  --td-color-btn-primary-text: #FFFFFF;\n  --td-color-btn-primary-hover: #721111;\n  --td-color-btn-secondary-bg: #7A6A4F;\n  --td-color-btn-secondary-text: #FFFFFF;\n  --td-color-btn-secondary-hover: #60513e;\n  --td-color-header-bg: #F5F0E8;\n  --td-color-header-text: #7A6A4F;\n  --td-color-footer-bg: #8B1A1A;\n  --td-color-footer-text: #FFFFFF;\n  --td-font-body: 'Inter', sans-serif;\n  --td-font-heading: 'Cormorant Garamond', serif;\n  --td-font-script: 'Great Vibes', cursive;\n  --td-font-size-base: 16px;\n  --td-heading-scale: 1.25;\n}\n\n/* Base Styles */\n* {\n  min-width: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: var(--td-font-body);\n  color: var(--td-color-text);\n  background-color: var(--td-color-background);\n  margin: 0;\n  line-height: 1.6;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: var(--td-font-heading);\n  color: var(--td-color-heading);\n  line-height: 1.1;\n  letter-spacing: -0.02em;\n}\n\nimg {\n  max-width: 100%;\n  height: auto;\n  object-fit: cover;\n  display: block;\n}\n\na {\n  color: var(--td-color-link);\n  text-decoration: none;\n}\n\na:hover {\n  color: var(--td-color-link-hover);\n}\n\n.fse-group, .fse-section {\n  overflow-x: hidden;\n}\n\n.fse-section {\n  padding: 80px 0;\n  position: relative;\n  z-index: 1;\n}\n\n.fse-group {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.fse-heading {\n  margin-bottom: 20px;\n  font-weight: 700;\n}\n\n.fse-heading.fse-hero-heading {\n  font-size: clamp(3rem, 7vw, 5rem);\n}\n\n.fse-paragraph {\n  margin-bottom: 15px;\n}\n\n.fse-button {\n  display: inline-block;\n  padding: 14px 28px;\n  border-radius: 8px;\n  text-decoration: none;\n  font-weight: 500;\n  cursor: pointer;\n  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease;\n  border: none;\n}\n\n.fse-button-primary {\n  background-color: var(--td-color-btn-primary-bg);\n  color: var(--td-color-btn-primary-text);\n}\n\n.fse-button-primary:hover {\n  filter: brightness(1.1);\n  transform: translateY(-2px);\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n  text-decoration: none;\n}\n\n.fse-button-secondary {\n  background-color: var(--td-color-btn-secondary-bg);\n  color: var(--td-color-btn-secondary-text);\n}\n\n.fse-button-secondary:hover {\n  filter: brightness(1.1);\n  transform: translateY(-2px);\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n  text-decoration: none;\n}\n\n.fse-columns {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 30px;\n}\n\n.fse-column {\n  flex: 1 1 300px;\n  min-width: 0;\n}\n\n@media (max-width: 768px) {\n  .fse-columns {\n    flex-direction: column;\n  }\n  .fse-column {\n    flex: 1 1 100%;\n    width: 100%;\n  }\n}\n\n/* Header */\n.fse-header {\n  padding: 15px 0;\n  background: var(--td-color-header-bg);\n  box-shadow: 0 2px 10px rgba(0,0,0,0.05);\n}\n\n.fse-header-content {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.fse-logo-area {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.fse-logo {\n  height: 70px;\n  width: auto;\n  min-height: 60px;\n}\n\n.fse-site-title {\n  font-size: 1.5rem;\n  font-weight: 700;\n  font-family: var(--td-font-heading);\n  color: var(--td-color-primary);\n}\n\n.fse-main-nav {\n  display: flex;\n}\n\n.fse-nav-menu {\n  display: flex;\n  gap: 30px;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  justify-content: center;\n  align-items: center;\n}\n\n.fse-nav-menu a {\n  text-decoration: none;\n  color: var(--td-color-header-text);\n  font-weight: 500;\n  white-space: nowrap;\n  transition: color 0.3s ease;\n}\n\n.fse-nav-menu a:hover {\n  color: var(--td-color-primary);\n}\n\n.fse-toggle-button {\n  display: none;\n  background: none;\n  border: none;\n  font-size: 24px;\n  cursor: pointer;\n  color: var(--td-color-header-text);\n}\n\n.fse-header-actions {\n  display: flex;\n  gap: 15px;\n}\n\n.fse-main-nav.mobile-open {\n  display: flex !important;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  background: var(--td-color-header-bg);\n  flex-direction: column;\n  padding: 20px;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n  z-index: 100;\n  transform-origin: top;\n  animation: slideDown 0.3s ease-out forwards;\n}\n\n@keyframes slideDown {\n  from { transform: scaleY(0); opacity: 0; }\n  to { transform: scaleY(1); opacity: 1; }\n}\n\n.fse-main-nav.mobile-open .fse-nav-menu {\n  flex-direction: column;\n  gap: 15px;\n  align-items: flex-start;\n}\n\n@media (max-width: 768px) {\n  .fse-toggle-button {\n    display: block;\n    order: 3;\n    margin-left: auto;\n  }\n  .fse-main-nav {\n    display: none;\n  }\n  .fse-header-actions {\n    display: none;\n  }\n  .fse-header-content {\n    flex-wrap: wrap;\n  }\n}\n\n/* Hero Section */\n.fse-hero-section {\n  padding: 100px 0;\n  min-height: 85vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  position: relative;\n  /* Gradient Mesh Background */\n  background: radial-gradient(at 10% 20%, #F8E8D9 0%, #D4C6B1 50%, #A99E8F 100%);\n  background-size: 200% 200%;\n  animation: gradientAnimation 15s ease infinite;\n}\n\n@keyframes gradientAnimation {\n  0% { background-position: 0% 50%; }\n  50% { background-position: 100% 50%; }\n  100% { background-position: 0% 50%; }\n}\n\n.fse-hero-grain-overlay {\n  position: absolute;\n  top: 0; left: 0; width: 100%; height: 100%;\n  background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E\");\n  pointer-events: none;\n  z-index: 2;\n}\n\n.fse-hero-content {\n  position: relative;\n  z-index: 3;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n\n.fse-hero-glass-panel {\n  background: rgba(255,255,255,0.1);\n  backdrop-filter: blur(20px);\n  border: 1px solid rgba(255,255,255,0.2);\n  border-radius: 15px;\n  padding: 40px 60px;\n  box-shadow: 0 8px 30px rgba(0,0,0,0.15);\n  max-width: 800px;\n  width: 100%;\n  color: #fff;\n}\n\n.fse-hero-glass-panel .fse-heading, .fse-hero-glass-panel .fse-paragraph {\n  color: #fff;\n}\n\n.fse-hero-subheading {\n  font-size: 1.25rem;\n  margin-bottom: 30px;\n  font-weight: 300;\n  opacity: 0.9;\n}\n\n.fse-hero-buttons {\n  display: flex;\n  justify-content: center;\n  gap: 20px;\n  margin-top: 30px;\n  flex-wrap: wrap;\n}\n\n@media (max-width: 480px) {\n  .fse-hero-buttons {\n    flex-direction: column;\n    align-items: center;\n  }\n  .fse-hero-buttons .fse-button {\n    width: 100%;\n    max-width: 280px;\n    text-align: center;\n  }\n  .fse-hero-glass-panel {\n    padding: 30px;\n  }\n}\n\n/* About Section */\n.fse-about-section {\n  background-color: var(--td-color-background);\n  text-align: center;\n}\n\n.fse-about-content h2 {\n  font-size: clamp(2.2rem, 5vw, 3rem);\n  margin-bottom: 25px;\n}\n\n.fse-about-content > .fse-paragraph {\n  max-width: 800px;\n  margin-left: auto;\n  margin-right: auto;\n  font-size: 1.1rem;\n  margin-bottom: 50px;\n}\n\n.fse-about-features {\n  justify-content: center;\n  margin-top: 40px;\n}\n\n.fse-about-features .fse-column {\n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(10px);\n  border: 1px solid rgba(255,255,255,0.3);\n  border-radius: 12px;\n  padding: 30px;\n  text-align: center;\n  box-shadow: 0 4px 20px rgba(0,0,0,0.05);\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.fse-about-features .fse-column:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 8px 25px rgba(0,0,0,0.1);\n}\n\n.fse-feature-icon {\n  font-size: 3rem;\n  color: var(--td-color-primary);\n  margin-bottom: 20px;\n}\n\n.fse-about-features h3 {\n  font-size: 1.5rem;\n  margin-bottom: 15px;\n}\n\n/* Branches Section */\n.fse-branch-section {\n  background: radial-gradient(at 80% 20%, #FFE0CC 0%, #D8C3AE 50%, #B8A89A 100%);\n  background-size: 200% 200%;\n  animation: gradientAnimation 15s ease infinite reverse;\n  color: #333;\n}\n\n.fse-branch-section .fse-heading {\n  color: var(--td-color-primary);\n}\n\n.fse-branch-section .fse-section-subheading {\n  color: var(--td-color-secondary);\n  font-size: 1.1rem;\n  margin-bottom: 40px;\n  text-align: center;\n}\n\n.fse-branches-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 30px;\n}\n\n.fse-branch-card {\n  background: rgba(255,255,255,0.8);\n  backdrop-filter: blur(8px);\n  border: 1px solid rgba(255,255,255,0.4);\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 30px rgba(0,0,0,0.08);\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.fse-branch-card:hover {\n  transform: translateY(-8px);\n  box-shadow: 0 8px 40px rgba(0,0,0,0.12);\n}\n\n.fse-branch-card .fse-image {\n  width: 100%;\n  height: 250px;\n  object-fit: cover;\n}\n\n.fse-branch-card .fse-card-content {\n  padding: 25px;\n  text-align: left;\n}\n\n.fse-branch-card .fse-heading {\n  font-size: 1.5rem;\n  margin-top: 0;\n  margin-bottom: 15px;\n  color: var(--td-color-primary);\n}\n\n.fse-branch-card .fse-paragraph {\n  color: var(--td-color-text);\n  margin-bottom: 20px;\n}\n\n@media (max-width: 992px) {\n  .fse-branches-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media (max-width: 576px) {\n  .fse-branches-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n/* Rooms Section */\n.fse-rooms-section {\n  background-color: var(--td-color-background);\n  text-align: center;\n}\n\n.fse-rooms-section .fse-heading {\n  color: var(--td-color-primary);\n}\n\n.fse-rooms-section .fse-section-subheading {\n  color: var(--td-color-secondary);\n  font-size: 1.1rem;\n  margin-bottom: 40px;\n}\n\n.fse-rooms-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 30px;\n  margin-bottom: 50px;\n}\n\n.fse-room-card {\n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(8px);\n  border: 1px solid rgba(255,255,255,0.4);\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 30px rgba(0,0,0,0.08);\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.fse-room-card:hover {\n  transform: translateY(-8px);\n  box-shadow: 0 8px 40px rgba(0,0,0,0.12);\n}\n\n.fse-room-card .fse-image {\n  width: 100%;\n  height: 220px;\n  object-fit: cover;\n}\n\n.fse-room-card .fse-card-content {\n  padding: 25px;\n  text-align: left;\n}\n\n.fse-room-card .fse-heading {\n  font-size: 1.4rem;\n  margin-top: 0;\n  margin-bottom: 10px;\n  color: var(--td-color-primary);\n}\n\n.fse-room-card .fse-paragraph {\n  color: var(--td-color-text);\n  margin-bottom: 15px;\n  font-size: 0.95rem;\n}\n\n.fse-room-price {\n  display: block;\n  font-size: 1.2rem;\n  font-weight: 700;\n  color: var(--td-color-primary);\n  margin-bottom: 20px;\n}\n\n.fse-cta-centered {\n  text-align: center;\n}\n\n@media (max-width: 992px) {\n  .fse-rooms-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media (max-width: 576px) {\n  .fse-rooms-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n/* Testimonials Section */\n.fse-testimonials-section {\n  background: radial-gradient(at 10% 90%, #F5F0E8 0%, #E8E0D4 50%, #D4C6B1 100%);\n  background-size: 200% 200%;\n  animation: gradientAnimation 20s ease infinite;\n  text-align: center;\n}\n\n.fse-testimonials-section .fse-heading {\n  color: var(--td-color-primary);\n}\n\n.fse-testimonials-section .fse-section-subheading {\n  color: var(--td-color-secondary);\n  font-size: 1.1rem;\n  margin-bottom: 50px;\n}\n\n.fse-testimonials-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 30px;\n}\n\n.fse-testimonial-card {\n  background: rgba(255,255,255,0.7);\n  backdrop-filter: blur(8px);\n  border: 1px solid rgba(255,255,255,0.4);\n  border-radius: 12px;\n  padding: 30px;\n  box-shadow: 0 4px 30px rgba(0,0,0,0.08);\n  text-align: center;\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.fse-testimonial-card:hover {\n  transform: translateY(-8px);\n  box-shadow: 0 8px 40px rgba(0,0,0,0.12);\n}\n\n.fse-testimonial-rating {\n  color: var(--td-color-primary);\n  margin-bottom: 15px;\n  font-size: 1.2rem;\n}\n\n.fse-testimonial-card .fse-paragraph {\n  font-style: italic;\n  margin-bottom: 25px;\n  color: var(--td-color-text);\n}\n\n.fse-testimonial-author {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n}\n\n.fse-testimonial-author .fse-image {\n  width: 70px;\n  height: 70px;\n  border-radius: 50%;\n  object-fit: cover;\n  border: 2px solid var(--td-color-primary);\n}\n\n.fse-author-name {\n  font-weight: 500;\n  color: var(--td-color-heading);\n  font-family: var(--td-font-heading);\n  font-size: 1.1rem;\n}\n\n@media (max-width: 992px) {\n  .fse-testimonials-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media (max-width: 576px) {\n  .fse-testimonials-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n/* CTA Banner */\n.fse-cta-banner {\n  background: linear-gradient(135deg, var(--td-color-primary) 0%, #A99E8F 100%);\n  padding: 100px 0;\n  text-align: center;\n  color: #fff;\n  position: relative;\n  overflow: hidden;\n}\n\n.fse-cta-overlay {\n  position: absolute;\n  top: 0; left: 0; right: 0; bottom: 0;\n  background: rgba(0,0,0,0.15);\n  z-index: 1;\n}\n\n.fse-cta-grain-overlay {\n  position: absolute;\n  top: 0; left: 0; width: 100%; height: 100%;\n  background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E\");\n  pointer-events: none;\n  z-index: 2;\n}\n\n.fse-cta-content {\n  position: relative;\n  z-index: 3;\n  max-width: 800px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.fse-cta-content .fse-heading {\n  color: #fff;\n  font-size: clamp(2rem, 5vw, 3.5rem);\n}\n\n.fse-cta-content .fse-paragraph {\n  color: rgba(255,255,255,0.9);\n  font-size: 1.15rem;\n  margin-bottom: 40px;\n}\n\n/* Footer */\n.fse-footer {\n  background: var(--td-color-footer-bg);\n  padding: 60px 0 20px;\n  color: var(--td-color-footer-text);\n}\n\n.fse-footer-content {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.fse-footer-columns {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n  gap: 40px;\n  margin-bottom: 40px;\n}\n\n.fse-footer-columns .fse-column {\n  text-align: left;\n}\n\n.fse-footer-columns .fse-column h4 {\n  margin-bottom: 15px;\n  font-size: 1.1rem;\n  color: var(--td-color-footer-text);\n  text-align: left;\n  font-family: var(--td-font-heading);\n}\n\n.fse-footer-logo {\n  height: 40px;\n  width: auto;\n  margin-bottom: 15px;\n  filter: brightness(0) invert(1);\n}\n\n.fse-footer-menu {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  text-align: left;\n}\n\n.fse-footer-menu li {\n  margin-bottom: 10px;\n}\n\n.fse-footer-menu a {\n  color: var(--td-color-footer-text);\n  text-decoration: none;\n  transition: color 0.3s ease;\n}\n\n.fse-footer-menu a:hover {\n  color: rgba(255,255,255,0.7);\n}\n\n.fse-contact-list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  text-align: left;\n}\n\n.fse-contact-list li {\n  margin-bottom: 12px;\n  display: flex;\n  align-items: flex-start;\n  gap: 10px;\n  justify-content: flex-start;\n  line-height: 1.4;\n}\n\n.fse-contact-list i {\n  width: 20px;\n  color: var(--td-color-footer-text);\n  flex-shrink: 0;\n  font-size: 1rem;\n  padding-top: 3px;\n}\n\n.fse-footer-bottom {\n  border-top: 1px solid rgba(255,255,255,0.15);\n  padding-top: 20px;\n  text-align: center;\n}\n\n.fse-copyright {\n  font-size: 14px;\n  text-align: center;\n  color: rgba(255,255,255,0.8);\n}\n\n@media (max-width: 768px) {\n  .fse-footer-columns {\n    grid-template-columns: 1fr;\n    gap: 30px;\n  }\n  .fse-footer-columns .fse-column {\n    text-align: center;\n  }\n  .fse-footer-columns .fse-column h4 {\n    text-align: center;\n  }\n  .fse-footer-menu {\n    text-align: center;\n  }\n  .fse-contact-list li {\n    justify-content: center;\n  }\n}\n\n/* Animations */\n.animate-on-scroll {\n  opacity: 0;\n  transform: translateY(20px);\n  transition: opacity 0.6s ease-out, transform 0.6s ease-out;\n}\n\n.animate-on-scroll.is-visible {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n.animate-slide-left {\n  opacity: 0;\n  transform: translateX(-50px);\n  transition: opacity 0.6s ease-out, transform 0.6s ease-out;\n}\n\n.animate-slide-left.is-visible {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.animate-slide-right {\n  opacity: 0;\n  transform: translateX(50px);\n  transition: opacity 0.6s ease-out, transform 0.6s ease-out;\n}\n\n.animate-slide-right.is-visible {\n  opacity: 1;\n  transform: translateX(0);\n}\n\n.animate-scale {\n  opacity: 0;\n  transform: scale(0.9);\n  transition: opacity 0.6s ease-out, transform 0.6s ease-out;\n}\n\n.animate-scale.is-visible {\n  opacity: 1;\n  transform: scale(1);\n}\n\n/* === Scroll Reveal Animation System === */\n@keyframes fadeSlideUp {\n  from { opacity: 0; transform: translateY(30px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n@keyframes fadeSlideLeft {\n  from { opacity: 0; transform: translateX(-30px); }\n  to { opacity: 1; transform: translateX(0); }\n}\n@keyframes fadeSlideRight {\n  from { opacity: 0; transform: translateX(30px); }\n  to { opacity: 1; transform: translateX(0); }\n}\n@keyframes scaleIn {\n  from { opacity: 0; transform: scale(0.95); }\n  to { opacity: 1; transform: scale(1); }\n}\n.animate-on-scroll { opacity: 0; }\n.animate-slide-left { opacity: 0; }\n.animate-slide-right { opacity: 0; }\n.animate-scale { opacity: 0; }\n.animate-on-scroll.visible { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }\n.animate-slide-left.visible { animation: fadeSlideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }\n.animate-slide-right.visible { animation: fadeSlideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }\n.animate-scale.visible { animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }\n/* Hover micro-interactions — buttons only lighten slightly, no underline, no text color change */\n.fse-button { transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease; }\n.fse-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); filter: brightness(1.1); text-decoration: none !important; }\n.fse-button:hover * { text-decoration: none !important; color: inherit !important; }\n"
+  }
+}
